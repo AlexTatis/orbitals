@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    margin: 2;
+    box-sizing: border-box;
+    font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
+    overflow: hidden;
+}
+
+#photon-form {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+}
+
+hr {
+    margin-bottom: 10;
+    margin-top: 10;
+}

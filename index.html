@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css?v=2">
+    <title>Excitación electrónica</title>
+</head>
+<body>
+    <canvas id="canvas">
+        Lo siento! Pero tu buscador no tiene soporte para el elemento canvas :(
+    </canvas>
+    <form action="#" id="photon-form" onsubmit="return false">
+        <fieldset>
+            <legend><h2>Fotón</h2></legend>
+            <p>λ (longitud de onda en nm):</p>
+            <input type="number" name="wavelength" id="wavelength">
+            <br>
+            <button type="button" onclick="delete photon; photon = new Photon(0, 0, document.getElementById('wavelength').value)">Crear fotón!</button>
+            <hr>
+            <p id="emitted-wavelength">λ emitida:</p>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend><h2>Electrón</h2></legend>
+        <p id="starting-orbital-output">Orbital inicial: </p>
+        <input type="range" min="1" max="20" oninput="document.getElementById('starting-orbital-output').innerHTML = 'Orbital inicial: '+this.value" id="starting-orbital">
+        <hr>
+        <p id="final-orbital-output">Orbital final: </p>
+        <hr>
+        <p id="spectrum">Color: </p>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend><h2>Núcleo</h2></legend>
+        <p id="atomic-number-output">Número atómico (Z): </p>
+        <input type="range" min="1" max="80" oninput="document.getElementById('atomic-number-output').innerHTML = 'Número atómico (Z): '+this.value" id="atomic-number">
+    </fieldset>
+    </form>
+    <script src="main.js?v=7"></script>
+</body>
+</html>
